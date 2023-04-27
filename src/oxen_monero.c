@@ -110,7 +110,7 @@ const unsigned char encoded_block_sizes[] = {0, 2, 3, 5, 6, 7, 9, 10, 11};
 static uint64_t uint_8be_to_64(const unsigned char* data, size_t size) {
     uint64_t res = 0;
     for (size_t i = 0; i < 8; i++) {
-        if (i > size) break;
+        if (i >= size) break;
         res <<= 8;
         res |= data[i];
     }
